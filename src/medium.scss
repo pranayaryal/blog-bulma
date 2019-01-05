@@ -1,0 +1,95 @@
+@import '../node_modules/bulma/bulma.sass';
+
+.navbar {
+    display: flex;
+}
+
+.nav-right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 
+       [xl-start] 1fr 1.5rem [md-start] minmax(0, 1000px) [md-end] 1.5rem 1fr [xl-end];
+
+}
+
+.columns-nav {
+    @extend .columns;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.image-in-card {
+    @extend .image;
+    background: url(images/mountain-hero.jpg) center/ cover;
+}
+    
+
+
+
+.grid * { grid-column: md;}
+.grid-xl { grid-column: xl;}
+
+
+.nav-column {
+  display: flex;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 0.75rem;
+  justify-content: center;
+}
+
+/* nav icons */
+.right li, .left li{
+    @extend  .has-text-grey;
+    margin-right: 0.7rem;
+    margin-left: 0.7rem;
+}
+
+.desktop {
+    @media (max-width: 674px) {
+        display: none;
+    }
+}
+
+
+
+.left {
+    margin-left: 10px;
+}
+
+.center, .center-column, .top, .right, .bottom, .left {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+// nav-column {
+//     @extend .center
+// }
+
+.center-column {
+    flex-direction: column; 
+}
+
+.top { align-items: flex-start;}
+.right { justify-content: flex-end;}
+.bottom { align-items: flex-end;}
+.left { justify-content: flex-start;}
+
+.is-vertical {
+    @extend .columns;
+    flex-direction: column;
+}
+
+.stacked-media {
+    @extend .column;
+    @extend .is-marginless
+}

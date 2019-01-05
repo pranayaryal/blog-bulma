@@ -1,0 +1,31 @@
+
+@import '../node_modules/bulma/bulma.sass';
+
+@import './Helpers.css';
+@import './grid.css';
+
+
+
+.hero {
+  background: black url(images/mountain-hero.jpg) center / cover;
+}
+
+
+@media (max-width: 1024px) {
+  .hero{
+    background: black url(images/mountain-hero.jpg) center / cover;
+  }
+
+
+}
+@media (max-width: 768px) {
+  .hero{
+    background: black url(images/mountain-hero.jpg) center / cover;
+  }
+} 
+
+@media (max-width: 768px){
+  :root {
+    font-size: 90%;
+  }
+}
